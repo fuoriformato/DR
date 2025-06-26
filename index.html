@@ -2,50 +2,54 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>archivioinutile</title>
-
-  <!-- Tag per il layout responsive su mobile -->
+  <title>fuoriformato</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Fira+Mono&display=swap" rel="stylesheet">
 
   <style>
-    /* Corpo della pagina */
+    /* Impostazioni di base */
     body {
       margin: 0;
       padding: 0;
+      background-color: #fdf6e3; /* sfondo carta caldo */
+      color: #333; /* testo leggibile */
       font-family: 'Libre Baskerville', serif;
-      background-color: #fdf6e3; /* colore caldo, tipo carta */
-color: #333; /* grigio scuro, più riposante del nero */
       line-height: 1.7;
     }
 
-    /* Contenitore principale */
+    /* Contenitore centrale */
     main {
       max-width: 750px;
-      width: 95%; /* Adattabile a tutti gli schermi */
+      width: 95%;
       margin: 60px auto;
-      padding: 0 1rem;
+      padding: 2rem;
+      background-color: #fefcf7;
+      border: 1px solid #e2d8c3;
+      box-shadow: 0 0 10px rgba(0,0,0,0.04);
+      border-radius: 8px;
     }
 
     h1 {
-      font-size: 2em;
-      margin-bottom: 0.2em;
+      font-size: 2.2em;
+      margin-bottom: 0.3em;
+      color: #7b341e; /* rosso bruciato */
       letter-spacing: -0.5px;
     }
 
     .subtitle {
       font-style: italic;
-      color: #666;
+      color: #6b4e3d;
       margin-bottom: 2.5em;
     }
 
     h2 {
       font-size: 1.3em;
       margin-top: 2em;
-      border-bottom: 1px solid #bbb;
+      border-bottom: 1px solid #cbb;
       padding-bottom: 0.3em;
+      color: #7b341e;
     }
 
     ul {
@@ -58,17 +62,16 @@ color: #333; /* grigio scuro, più riposante del nero */
     }
 
     a {
-      color: #0a0a0a;
+      color: #a03d2d;
       text-decoration: none;
-      border-bottom: 1px dotted #444;
-      transition: all 0.2s ease;
+      border-bottom: 1px dotted #a03d2d;
+      transition: background-color 0.2s ease;
       font-family: 'Fira Mono', monospace;
-      word-break: break-word; /* Spezza i link lunghi */
+      word-break: break-word;
     }
 
     a:hover {
-      color: #000;
-      background-color: #ffffaa;
+      background-color: #fce9e0;
     }
 
     footer {
@@ -80,10 +83,10 @@ color: #333; /* grigio scuro, più riposante del nero */
       font-style: italic;
     }
 
-    /* Ottimizzazione specifica per schermi piccoli */
+    /* Responsive mobile */
     @media (max-width: 500px) {
       h1 {
-        font-size: 1.5em;
+        font-size: 1.7em;
       }
 
       h2 {
@@ -99,7 +102,7 @@ color: #333; /* grigio scuro, più riposante del nero */
 
 <body>
   <main>
-    <h1>archivioinutile</h1>
+    <h1>fuoriformato</h1>
     <p class="subtitle">Testi critici, sconnessi, reali. Da leggere con calma o con rabbia.</p>
 
     <h2>Testi singoli</h2>
