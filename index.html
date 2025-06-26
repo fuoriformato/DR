@@ -2,148 +2,130 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>fuoriformato</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Fira+Mono&display=swap" rel="stylesheet">
-
+  <title>fuoriformato</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #0e0e0e;
-      color: #f8f8f8;
-      font-family: 'Libre Baskerville', serif;
-      line-height: 1.7;
+    :root {
+      --bg-color: #000;
+      --text-color: #eee;
+      --link-color: #70cfff;
+      --button-bg: #222;
+      --button-text: #eee;
+      --button-border: #70cfff;
     }
 
-    main {
-      max-width: 750px;
-      width: 95%;
-      margin: 60px auto;
+    [data-theme="light"] {
+      --bg-color: #fdf6e3;
+      --text-color: #222;
+      --link-color: #0077cc;
+      --button-bg: #ddd;
+      --button-text: #111;
+      --button-border: #0077cc;
+    }
+
+    body {
+      margin: 0;
       padding: 2rem;
-      background-color: #121212;
-      border: 1px solid #2c2c2c;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.03);
-      border-radius: 8px;
+      font-family: 'Libre Baskerville', serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     h1 {
-      font-size: 2.2em;
-      margin-bottom: 0.3em;
-      color: #ffffff;
-      letter-spacing: -0.5px;
+      text-align: center;
+      margin-bottom: 0.5em;
     }
 
-    .subtitle {
-      font-style: italic;
-      color: #cccccc;
-      margin-bottom: 2.5em;
+    .theme-toggle-wrapper {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
     }
 
-    .section-container {
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
+    .toggle-button {
+      font-family: inherit;
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      background: var(--button-bg);
+      color: var(--button-text);
+      border: 1px solid var(--button-border);
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.3s ease;
     }
 
-    .raccolta, .singoli {
-      padding: 1rem;
-      border: 1px solid #2e2e2e;
-      border-radius: 6px;
-      background-color: #181818;
+    .toggle-button:hover {
+      background-color: var(--button-border);
+      color: var(--bg-color);
     }
 
-    h2 {
-      font-size: 1.3em;
-      border-bottom: 1px solid #444;
-      padding-bottom: 0.3em;
-      color: #f0f0f0;
-      margin-top: 0;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 1em 0 0 0;
-    }
-
-    li {
-      margin: 0.8em 0;
+    .sezione {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      border: 1px solid var(--link-color);
+      border-radius: 8px;
     }
 
     a {
-      color: #b3f0ff;
+      color: var(--link-color);
       text-decoration: none;
-      border-bottom: 1px dotted #b3f0ff;
-      transition: background-color 0.2s ease;
-      font-family: 'Fira Mono', monospace;
-      word-break: break-word;
     }
-
     a:hover {
-      background-color: #1a1a1a;
+      text-decoration: underline;
     }
 
-    footer {
-      margin-top: 4em;
-      font-size: 0.9em;
-      color: #777;
-      border-top: 1px solid #333;
-      padding-top: 1em;
-      font-style: italic;
-    }
-
-    @media (max-width: 500px) {
-      h1 {
-        font-size: 1.7em;
-      }
-
-      h2 {
-        font-size: 1.1em;
-      }
-
-      .subtitle {
-        font-size: 0.95em;
-      }
+    h2 {
+      margin-top: 0;
     }
   </style>
 </head>
-
 <body>
-  <main>
-    <h1>fuoriformato</h1>
-    <p class="subtitle"></p>
+  <div class="theme-toggle-wrapper">
+    <button class="toggle-button" onclick="toggleTheme()">
+      mi fido di te, scegli tu il colore
+    </button>
+  </div>
 
-    <div class="section-container">
-      <section class="raccolta">
-        <h2>Raccolta</h2>
-        <ul>
-          <li><a href="testi/2025-04-20_non-serve-a-nulla.html">Non serve a nulla (ma è tutto vero)</a></li>
-        </ul>
-        <p style="margin-top: 1em; color: #aaa; font-size: 0.95em; font-style: italic;">
-          Una raccolta autonoma. I testi contenuti qui non si trovano nella sezione seguente.
-        </p>
-      </section>
+  <h1>fuoriformato</h1>
 
-      <section class="singoli">
-        <h2>Testi singoli</h2>
-        <ul>
-          <li><a href="testi/2024-12-04_non-sono-un-medico.html">Non sono un medico, non voglio essere un paziente</a></li>
-          <li><a href="testi/2025-01-06_una-gabbia-luminosa.html">Una gabbia luminosa (Il Panopticon)</a></li>
-          <li><a href="testi/2025-01-11_cronache-di-uno.html">Cronache di uno che si è smentito da solo</a></li>
-          <li><a href="testi/2025-01-18_io-non-ho-mai-voluto.html">Io non ho mai voluto entrarci</a></li>
-          <li><a href="testi/2025-01-25_voglio-lo-stipendio.html">Voglio lo stipendio per andare all'assemblea di quartiere</a></li>
-          <li><a href="testi/2025-02-07_panino-vegano.html">Un panino vegano, una canna, e la fine dell'urbanizzazione</a></li>
-          <li><a href="testi/2025-03-12_dopo-ventitre-pagine.html">Dopo ventitré pagine non mi fido più nemmeno di me stesso</a></li>
-          <li><a href="testi/2025-04-10_radici-concettuali.html">Radici concettuali non pervenute</a></li>
-        </ul>
-      </section>
-    </div>
+  <div class="sezione">
+    <h2>Raccolta</h2>
+    <p><strong>Non serve a nulla (ma è tutto vero)</strong> è una raccolta chiusa di testi, scritta nel maggio del 2025.</p>
+    <p><a href="testi/Non_serve_a_nulla__ma_è_tutto_vero_.pdf" target="_blank">→ Leggi o scarica la raccolta</a></p>
+  </div>
 
-    <footer>
-    </footer>
-  </main>
+  <div class="sezione">
+    <h2>Testi singoli</h2>
+    <p>Questi testi, pur non inclusi nella raccolta, ne condividono lo spirito: sono frammenti autonomi ma intrecciati, episodi paralleli che dialogano con gli stessi temi.</p>
+    <ul>
+      <li><a href="testi/Voglio_lo_stipendio_per_andare_all_assemblea_di_quartiere.html">Voglio lo stipendio per andare all'assemblea di quartiere</a></li>
+      <li><a href="testi/Cronache_di_uno_che_si_è_smentito_da_solo.html">Cronache di uno che si è smentito da solo</a></li>
+      <li><a href="testi/Io_non_ho_mai_voluto_entrarci.html">Io non ho mai voluto entrarci</a></li>
+      <li><a href="testi/Una_gabbia_luminosa___Il_Panopticon.html">Una gabbia luminosa – Il Panopticon</a></li>
+      <li><a href="testi/Non_sono_un_medico___non_voglio_essere_un_paziente.html">Non sono un medico / non voglio essere un paziente</a></li>
+      <li><a href="testi/Radici_concettuali_non_pervenute.html">Radici concettuali non pervenute</a></li>
+      <li><a href="testi/Un_panino_vegano__una_canna__e_la_fine_dell_urbanizzazione.html">Un panino vegano, una canna, e la fine dell'urbanizzazione</a></li>
+      <li><a href="testi/Dopo_ventitré_pagine_non_mi_fido_più_nemmeno_di_me_stesso.html">Dopo ventitré pagine non mi fido più nemmeno di me stesso</a></li>
+    </ul>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const current = document.body.getAttribute('data-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      document.body.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.body.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+    })();
+  </script>
 </body>
 </html>
