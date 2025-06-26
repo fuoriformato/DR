@@ -1,58 +1,121 @@
-<!DOCTYPE html>
-<html lang="it">
+<!DOCTYPE html> <!-- Dichiara che è un documento HTML5 -->
+<html lang="it"> <!-- Imposta la lingua del sito in italiano -->
 <head>
-  <meta charset="UTF-8" />
-  <title>archivioinutile</title>
+  <meta charset="UTF-8"> <!-- Codifica caratteri per supportare lettere accentate ecc -->
+  <title>fuoriformato</title> <!-- Titolo che compare nella scheda del browser -->
+
+  <!-- Importa due font da Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Fira+Mono&display=swap" rel="stylesheet">
+
   <style>
+    /* Stile generale della pagina */
     body {
       margin: 0;
-      font-family: sans-serif;
-      background: linear-gradient(135deg, #f3f3f3, #dddddd);
-      color: #111;
-      padding: 2rem;
+      padding: 0;
+      font-family: 'Libre Baskerville', serif; /* Font principale */
+      background: linear-gradient(to bottom, #f9f9f9, #e0e0e0); /* Gradiente sfondo */
+      color: #1a1a1a;
+      line-height: 1.7;
     }
 
+    /* Impostazioni del contenuto principale */
+    main {
+      max-width: 750px;
+      margin: 60px auto; /* centra orizzontalmente */
+      padding: 0 30px;
+    }
+
+    /* Titolo principale */
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 2.2em;
+      margin-bottom: 0.2em;
+      letter-spacing: -0.5px;
     }
 
+    /* Sottotitolo */
+    .subtitle {
+      font-style: italic;
+      color: #666;
+      margin-bottom: 2.5em;
+    }
+
+    /* Titoli secondari (es. "Testi singoli") */
+    h2 {
+      font-size: 1.4em;
+      margin-top: 2em;
+      border-bottom: 1px solid #bbb;
+      padding-bottom: 0.3em;
+    }
+
+    /* Lista dei testi (nessun punto elenco) */
     ul {
       list-style: none;
       padding: 0;
     }
 
     li {
-      margin: 0.6rem 0;
+      margin: 0.8em 0;
     }
 
+    /* Link ai testi */
     a {
+      color: #0a0a0a;
       text-decoration: none;
-      color: #111;
-      padding: 0.4rem 0.6rem;
-      background: white;
-      display: inline-block;
-      border-left: 5px solid black;
-      transition: background 0.2s;
+      border-bottom: 1px dotted #444; /* linea tratteggiata sotto */
+      transition: all 0.2s ease;
+      font-family: 'Fira Mono', monospace; /* Font alternativo per i link */
     }
 
     a:hover {
-      background: #eee;
+      color: #000;
+      background-color: #ffffaa; /* Evidenziato al passaggio del mouse */
+    }
+
+    /* Footer in basso alla pagina */
+    footer {
+      margin-top: 4em;
+      font-size: 0.9em;
+      color: #999;
+      border-top: 1px solid #ccc;
+      padding-top: 1em;
+      font-style: italic;
     }
   </style>
 </head>
+
 <body>
-  <h1>archivioinutile</h1>
-  <ul>
-    <li><a href="testi/2024-12-04_non-sono-un-medico.html">Non sono un medico, non voglio essere un paziente</a></li>
-    <li><a href="testi/2025-01-06_una-gabbia-luminosa.html">Una gabbia luminosa (Il Panopticon)</a></li>
-    <li><a href="testi/2025-01-11_cronache-di-uno.html">Cronache di uno che si è smentito da solo</a></li>
-    <li><a href="testi/2025-01-18_io-non-ho-mai-voluto.html">Io non ho mai voluto entrarci</a></li>
-    <li><a href="testi/2025-01-25_voglio-lo-stipendio.html">Voglio lo stipendio per andare all'assemblea di quartiere</a></li>
-    <li><a href="testi/2025-02-07_panino-vegano.html">Un panino vegano, una canna, e la fine dell'urbanizzazione</a></li>
-    <li><a href="testi/2025-03-12_dopo-ventitre-pagine.html">Dopo ventitré pagine non mi fido più nemmeno di me stesso</a></li>
-    <li><a href="testi/2025-04-10_radici-concettuali.html">Radici concettuali non pervenute</a></li>
-    <li><a href="testi/2025-04-20_non-serve-a-nulla.html">Non serve a nulla (ma è tutto vero)</a></li>
-  </ul>
+  <main>
+    <!-- Titolo grande della pagina -->
+    <h1>Non serve a nulla (ma è tutto vero)</h1>
+
+    <!-- Breve descrizione sotto il titolo -->
+    <p class="subtitle">Testi critici, sconnessi, reali. Da leggere con calma o con rabbia.</p>
+
+    <!-- Sezione testi singoli -->
+    <h2>Testi singoli</h2>
+    <ul>
+      <!-- Ogni link punta a un file HTML nella cartella "testi" -->
+      <li><a href="testi/non_sono_un_medico.html">Non sono un medico — non voglio essere un paziente</a></li>
+      <li><a href="testi/una_gabbia_luminosa.html">Una gabbia luminosa — Il Panopticon</a></li>
+      <li><a href="testi/cronache_smentito.html">Cronache di uno che si è smentito da solo</a></li>
+      <li><a href="testi/io_non_ho_voluto.html">Io non ho mai voluto entrarci</a></li>
+      <li><a href="testi/assemblea_quartiere.html">Voglio lo stipendio per andare all’assemblea di quartiere</a></li>
+      <li><a href="testi/panino_canna.html">Un panino vegano, una canna e la fine dell’urbanizzazione</a></li>
+      <li><a href="testi/ventitre_pagine.html">Dopo ventitré pagine non mi fido più nemmeno di me stesso</a></li>
+      <li><a href="testi/radici_concettuali.html">Radici concettuali non pervenute</a></li>
+    </ul>
+
+    <!-- Sezione raccolta -->
+    <h2>Raccolta</h2>
+    <ul>
+      <!-- Link al file HTML della raccolta, nella cartella "raccolta" -->
+      <li><a href="raccolta/non_serve_a_nulla.html">Non serve a nulla (ma è tutto vero)</a></li>
+    </ul>
+
+    <!-- Footer finale -->
+    <footer>
+      © Testi di [tuo nome o pseudonimo]. Nessuna pretesa. Nessuna promessa. Solo parole.
+    </footer>
+  </main>
 </body>
 </html>
