@@ -58,17 +58,19 @@ a:hover {
 
 /* Pulsante tema */
 #theme-toggle {
-  position: absolute;
-  top: 1rem;
+  position: fixed;
+  bottom: 1rem;
   right: 1rem;
   background-color: #5ec2ff;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   font-size: 0.9rem;
   border-radius: 999px;
   cursor: pointer;
   font-family: inherit;
   color: #000;
+  z-index: 1000;
+  box-shadow: 0 0 8px #00000055;
   transition: background-color 0.3s;
 }
 #theme-toggle:hover {
