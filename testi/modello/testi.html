@@ -82,23 +82,32 @@
     p {
       margin-bottom: 1.2em;
     }
+    .back-button-wrapper {
+  position: fixed;
+  top: 1.5rem;
+  left: 2rem;
+  z-index: 1000;
+}
   </style>
+  
 </head>
 <body>
-  <div class="theme-toggle-wrapper">
-    <button class="toggle-button" onclick="toggleTheme()">
-      fai tu
-    </button>
-  </div>
+<div class="theme-toggle-wrapper">
+  <button class="toggle-button" onclick="toggleTheme()">fai tu</button>
+</div>
 
-  <div class="contenuto">
-    <!-- Inserisci qui il tuo testo -->
-    <h1>Titolo del testo</h1>
-    <p style="margin-top: -1rem; font-size: 0.95rem; color: var(--link-color);"><em>data</em></p>
-      <p><a href="link pdf.pdf" target="_blank">PDF</a></p>
-    <p>Testo iniziale, prologo, introduzione o qualsiasi frammento tu voglia.</p>
-    <p>Qui puoi incollare direttamente i tuoi testi scritti. Il font, lo stile e il tema sono già configurati. Puoi usare anche <a href="#">link</a>, titoli, elenchi, blocchi di citazione, ecc.</p>
-  </div>
+<div class="back-button-wrapper">
+  <a class="toggle-button" href="../index.html">← torna alla home</a>
+</div>
+
+<div class="contenuto">
+  <h1>Voglio lo stipendio per andare all’assemblea di quartiere</h1>
+  <p class="data-testo"><em>data</em></p>
+  <p><a href="pdf/pdf nome qui" target="_blank">PDF</a></p>
+
+  <p>testo qui</p>
+
+</div>
 
   <script>
     function toggleTheme() {
