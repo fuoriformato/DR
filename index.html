@@ -33,19 +33,23 @@
     </ul>
   </div>
 
-  <script>
-    function toggleTheme() {
-      const current = document.body.getAttribute('data-theme');
-      const next = current === 'light' ? 'dark' : 'light';
-      document.body.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-    }
+ <button id="theme-toggle">🌓 cambia luce</button>
 
-    (function () {
-      const saved = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      document.body.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
-    })();
-  </script>
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // inizializza da localStorage
+  if (localStorage.getItem('theme') === 'light') {
+    body.classList.add('light');
+  }
+
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('light');
+    const isLight = body.classList.contains('light');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  });
+</script>
+  
 </body>
 </html>
