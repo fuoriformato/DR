@@ -9,23 +9,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Fira+Mono&display=swap" rel="stylesheet">
 
   <style>
-    /* Impostazioni di base */
     body {
       margin: 0;
       padding: 0;
-      background-color: #0e0e0e; /* sfondo nero profondo */
-      color: #f8f8f8; /* testo bianco neon */
+      background-color: #0e0e0e;
+      color: #f8f8f8;
       font-family: 'Libre Baskerville', serif;
       line-height: 1.7;
     }
 
-    /* Contenitore centrale */
     main {
       max-width: 750px;
       width: 95%;
       margin: 60px auto;
       padding: 2rem;
-      background-color: #121212; /* contenitore leggermente più chiaro */
+      background-color: #121212;
       border: 1px solid #2c2c2c;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.03);
       border-radius: 8px;
@@ -34,7 +32,7 @@
     h1 {
       font-size: 2.2em;
       margin-bottom: 0.3em;
-      color: #ffffff; /* bianco intenso */
+      color: #ffffff;
       letter-spacing: -0.5px;
     }
 
@@ -44,17 +42,31 @@
       margin-bottom: 2.5em;
     }
 
+    .section-container {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .raccolta, .singoli {
+      padding: 1rem;
+      border: 1px solid #2e2e2e;
+      border-radius: 6px;
+      background-color: #181818;
+    }
+
     h2 {
       font-size: 1.3em;
-      margin-top: 2em;
       border-bottom: 1px solid #444;
       padding-bottom: 0.3em;
       color: #f0f0f0;
+      margin-top: 0;
     }
 
     ul {
       list-style: none;
       padding: 0;
+      margin: 1em 0 0 0;
     }
 
     li {
@@ -62,7 +74,7 @@
     }
 
     a {
-      color: #b3f0ff; /* azzurrino neon */
+      color: #b3f0ff;
       text-decoration: none;
       border-bottom: 1px dotted #b3f0ff;
       transition: background-color 0.2s ease;
@@ -83,7 +95,6 @@
       font-style: italic;
     }
 
-    /* Responsive mobile */
     @media (max-width: 500px) {
       h1 {
         font-size: 1.7em;
@@ -105,25 +116,33 @@
     <h1>fuoriformato</h1>
     <p class="subtitle"></p>
 
-    <h2>Testi singoli</h2>
-    <ul>
-      <li><a href="testi/2024-12-04_non-sono-un-medico.html">Non sono un medico, non voglio essere un paziente</a></li>
-      <li><a href="testi/2025-01-06_una-gabbia-luminosa.html">Una gabbia luminosa (Il Panopticon)</a></li>
-      <li><a href="testi/2025-01-11_cronache-di-uno.html">Cronache di uno che si è smentito da solo</a></li>
-      <li><a href="testi/2025-01-18_io-non-ho-mai-voluto.html">Io non ho mai voluto entrarci</a></li>
-      <li><a href="testi/2025-01-25_voglio-lo-stipendio.html">Voglio lo stipendio per andare all'assemblea di quartiere</a></li>
-      <li><a href="testi/2025-02-07_panino-vegano.html">Un panino vegano, una canna, e la fine dell'urbanizzazione</a></li>
-      <li><a href="testi/2025-03-12_dopo-ventitre-pagine.html">Dopo ventitré pagine non mi fido più nemmeno di me stesso</a></li>
-      <li><a href="testi/2025-04-10_radici-concettuali.html">Radici concettuali non pervenute</a></li>
-    </ul>
+    <div class="section-container">
+      <section class="raccolta">
+        <h2>Raccolta</h2>
+        <ul>
+          <li><a href="testi/2025-04-20_non-serve-a-nulla.html">Non serve a nulla (ma è tutto vero)</a></li>
+        </ul>
+        <p style="margin-top: 1em; color: #aaa; font-size: 0.95em; font-style: italic;">
+          Una raccolta autonoma. I testi contenuti qui non si trovano nella sezione seguente.
+        </p>
+      </section>
 
-    <h2>Raccolta</h2>
-    <ul>
-      <li><a href="testi/2025-04-20_non-serve-a-nulla.html">Non serve a nulla (ma è tutto vero)</a></li>
-    </ul>
+      <section class="singoli">
+        <h2>Testi singoli</h2>
+        <ul>
+          <li><a href="testi/2024-12-04_non-sono-un-medico.html">Non sono un medico, non voglio essere un paziente</a></li>
+          <li><a href="testi/2025-01-06_una-gabbia-luminosa.html">Una gabbia luminosa (Il Panopticon)</a></li>
+          <li><a href="testi/2025-01-11_cronache-di-uno.html">Cronache di uno che si è smentito da solo</a></li>
+          <li><a href="testi/2025-01-18_io-non-ho-mai-voluto.html">Io non ho mai voluto entrarci</a></li>
+          <li><a href="testi/2025-01-25_voglio-lo-stipendio.html">Voglio lo stipendio per andare all'assemblea di quartiere</a></li>
+          <li><a href="testi/2025-02-07_panino-vegano.html">Un panino vegano, una canna, e la fine dell'urbanizzazione</a></li>
+          <li><a href="testi/2025-03-12_dopo-ventitre-pagine.html">Dopo ventitré pagine non mi fido più nemmeno di me stesso</a></li>
+          <li><a href="testi/2025-04-10_radici-concettuali.html">Radici concettuali non pervenute</a></li>
+        </ul>
+      </section>
+    </div>
 
     <footer>
-      sito statico e inutile, come i testi.
     </footer>
   </main>
 </body>
