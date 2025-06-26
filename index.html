@@ -1,7 +1,89 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fuoriformato</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #000;
+      --text-color: #eee;
+      --link-color: #70cfff;
+      --button-bg: #222;
+      --button-text: #eee;
+      --button-border: #70cfff;
+    }
+
+    [data-theme="light"] {
+      --bg-color: #fdf6e3;
+      --text-color: #222;
+      --link-color: #0077cc;
+      --button-bg: #ddd;
+      --button-text: #111;
+      --button-border: #0077cc;
+    }
+
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: 'Libre Baskerville', serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 0.5em;
+    }
+
+    .theme-toggle-wrapper {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 2rem;
+      z-index: 1000;
+    }
+
+    .toggle-button {
+      font-family: inherit;
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      background: var(--button-bg);
+      color: var(--button-text);
+      border: 1px solid var(--button-border);
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .toggle-button:hover {
+      background-color: var(--button-border);
+      color: var(--bg-color);
+    }
+
+    .sezione {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      border: 1px solid var(--link-color);
+      border-radius: 8px;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+  </style>
 </head>
 <body>
   <div class="theme-toggle-wrapper">
@@ -15,7 +97,7 @@
   <div class="sezione">
     <h2>Raccolta</h2>
     <p><strong>Non serve a nulla (ma è tutto vero)</strong> è una raccolta chiusa di testi, scritta nel maggio del 2025.</p>
-    <p><a href="testi/Non_serve_a_nulla__ma_è_tutto_vero_ (2).pdf" target="_blank">→ Leggi o scarica la raccolta</a></p>
+    <p><a href="testi/Non_serve_a_nulla__ma_è_tutto_vero_.pdf" target="_blank">→ Leggi o scarica la raccolta</a></p>
   </div>
 
   <div class="sezione">
@@ -33,23 +115,19 @@
     </ul>
   </div>
 
- <button id="theme-toggle">🌓 cambia luce</button>
+  <script>
+    function toggleTheme() {
+      const current = document.body.getAttribute('data-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      document.body.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
 
-<script>
-  const toggle = document.getElementById('theme-toggle');
-  const body = document.body;
-
-  // inizializza da localStorage
-  if (localStorage.getItem('theme') === 'light') {
-    body.classList.add('light');
-  }
-
-  toggle.addEventListener('click', () => {
-    body.classList.toggle('light');
-    const isLight = body.classList.contains('light');
-    localStorage.setItem('theme', isLight ? 'light' : 'dark');
-  });
-</script>
-  
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.body.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+    })();
+  </script>
 </body>
 </html>
