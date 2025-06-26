@@ -76,6 +76,13 @@ a:hover {
 #theme-toggle:hover {
   background-color: #4aaddd;
 }
+body.light #theme-toggle {
+  background-color: #007acc;
+  color: #fff;
+}
+body.light #theme-toggle:hover {
+  background-color: #005a99;
+}
 
 /* Modalità chiara */
 body.light {
