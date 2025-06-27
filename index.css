@@ -1,0 +1,77 @@
+:root {
+  --bg-color: #000;
+  --text-color: #eee;
+  --link-color: #70cfff;
+  --button-bg: #222;
+  --button-text: #eee;
+  --button-border: #70cfff;
+}
+
+[data-theme="light"] {
+  --bg-color: #fdf6e3;
+  --text-color: #222;
+  --link-color: #0077cc;
+  --button-bg: #ddd;
+  --button-text: #111;
+  --button-border: #0077cc;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: 'Libre Baskerville', serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.theme-toggle-wrapper {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.toggle-button {
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: 1px solid var(--button-border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: var(--button-border);
+  color: var(--bg-color);
+}
+
+.sezione {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid var(--link-color);
+  border-radius: 8px;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  margin-top: 0;
+}

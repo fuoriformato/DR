@@ -1,0 +1,133 @@
+/* 🎨 Colori tema scuro (default) */
+:root {
+  --bg-color: #000;
+  --text-color: #eee;
+  --link-color: #70cfff;
+  --button-bg: #222;
+  --button-text: #eee;
+  --button-border: #70cfff;
+}
+
+/* 🌞 Colori tema chiaro */
+[data-theme="light"] {
+  --bg-color: #fdf6e3;
+  --text-color: #222;
+  --link-color: #0077cc;
+  --button-bg: #ddd;
+  --button-text: #111;
+  --button-border: #0077cc;
+}
+
+/* 🧍 Stile base del corpo */
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: 'Libre Baskerville', serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* 📌 Note a piè di pagina */
+.footnote {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--text-color);
+  opacity: 0.7;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--link-color);
+}
+
+/* ↩️ Link di ritorno dalla nota al testo */
+.backnote {
+  margin-left: 0.5em;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--link-color);
+  opacity: 0.6;
+}
+
+/* 🔘 Posizione del bottone per cambiare tema */
+.theme-toggle-wrapper {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+/* 🎛️ Stile del bottone tema */
+.toggle-button {
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: 1px solid var(--button-border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: var(--button-border);
+  color: var(--bg-color);
+}
+
+/* 📄 Contenitore del testo centrale */
+.contenuto {
+  max-width: 700px;
+  margin: 4rem auto;
+  padding: 1.5rem;
+  border: 1px solid var(--link-color);
+  border-radius: 8px;
+}
+
+/* 🏷️ Titoli */
+h1, h2, h3 {
+  margin-top: 1.5em;
+}
+
+/* 🔗 Link generici */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 📑 Paragrafi */
+p {
+  margin-bottom: 1.2em;
+}
+
+/* ⬅️ Pulsante "indietro" (se presente) */
+.back-button-wrapper {
+  position: fixed;
+  top: 1.5rem;
+  left: 2rem;
+  z-index: 1000;
+}
+
+/* ✨ Effetto pulse visibile al clic sulle note */
+@keyframes pulse-highlight {
+  0% {
+    background-color: var(--link-color);
+    color: var(--bg-color);
+  }
+  50% {
+    background-color: var(--button-border);
+    color: var(--bg-color);
+  }
+  100% {
+    background-color: transparent;
+    color: var(--text-color);
+  }
+}
+
+.pulse {
+  animation: pulse-highlight 2.5s ease;
+}
