@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Git2: add, commit, push",
+      "type": "shell",
+      "command": "git add . && git commit -m \"Aggiornamento automatico\" && git push",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "detail": "Task per aggiornare automaticamente Git"
+    }
+    
+  ]
+}
