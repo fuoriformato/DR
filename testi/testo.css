@@ -10,7 +10,7 @@
 
 /* 🌞 Colori tema chiaro */
 [data-theme="light"] {
-  --bg-color: #fdf6e3;
+  --bg-color: #f9f6f2;
   --text-color: #222;
   --link-color: #0077cc;
   --button-bg: #ddd;
@@ -147,4 +147,52 @@ p {
 
 .comic {
   font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.contenuto {
+  position: relative;
+}
+
+.link-pdf {
+  display: block;
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.link-pdf:hover {
+  opacity: 1;
+}
+.data-ultimo {
+  margin-left: 0.2rem;
+}
+
+/* 📅 Data vicino al titolo */
+.data-testo {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+.bottone-pdf-fisso {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--button-border);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  text-align: center;
+  line-height: 1.2;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.bottone-pdf-fisso:hover {
+  background-color: var(--button-border);
+  color: var(--bg-color);
 }

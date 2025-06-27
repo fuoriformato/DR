@@ -6,17 +6,25 @@
   --button-bg: #222;              /* Sfondo del pulsante */
   --button-text: #eee;            /* Colore del testo nel pulsante */
   --button-border: #70cfff;       /* Colore del bordo del pulsante */
-}
+  --highlight-bg: #1a1a1a;           /* Sfondo per box in evidenza nel tema scuro */
+  --highlight-shadow: 0 4px 15px rgba(255, 255, 255, 0.15); /* Ombra chiara nel tema scuro */
+  }
 
 /* Tema chiaro: sovrascrive le variabili se data-theme="light" è presente */
 [data-theme="light"] {
-  --bg-color: #fdf6e3;            /* Sfondo chiaro (tipo Solarized Light) */
+  --bg-color: #f9f6f2;            /* Sfondo chiaro leggermente più caldo */
   --text-color: #222;             /* Testo scuro per contrasto */
   --link-color: #0077cc;          /* Blu acceso per i link */
   --button-bg: #ddd;              /* Sfondo chiaro del pulsante */
   --button-text: #111;            /* Testo molto scuro nel pulsante */
   --button-border: #0077cc;       /* Bordo blu */
-}
+  --highlight-bg: #eeeae5;        /* Sfondo tenue nel tema chiaro */
+  --highlight-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombra scura nel tema chiaro */
+  .etichetta-ultimo,
+  .data-ultimo {
+    color: #444;
+  }
+  }
 
 /* Stile globale del corpo della pagina */
 body {
@@ -91,4 +99,54 @@ h2 {
 ul li > strong {
   font-size: 0.85rem;             /* Riduce leggermente la dimensione del numero */
   margin-right: 0.4rem;           /* Aggiunge spazio tra numero e testo */
+}
+.box-ultimo-testo {
+  border: 2px solid var(--button-border);
+  background-color: var(--highlight-bg);
+  border-radius: 8px;
+  padding: 0.4rem;
+  margin: 2rem auto;
+  box-shadow: var(--highlight-shadow);
+  max-width: 620px;
+  box-sizing: border-box;
+}
+
+.etichetta-ultimo {
+  font-size: 0.7rem;
+  font-style: italic;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+}
+
+.titolo-ultimo {
+  font-size: 0.9rem;
+  margin: 0 0 0.6rem 0;
+  line-height: 1.4;
+}
+
+.titolo-ultimo a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.data-ultimo {
+  font-size: 0.7rem;
+  color: #999;
+  margin-left: 0.5rem;
+}
+
+.anteprima summary {
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #ccc;
+  margin-bottom: 0.3rem;
+}
+
+.anteprima p {
+  margin-left: 1rem;
+  font-style: italic;
+  color: #bbb;
+  font-size: 0.75rem;
+  line-height: 1.2rem;
 }

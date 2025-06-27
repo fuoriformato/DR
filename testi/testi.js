@@ -66,4 +66,21 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     }
   });
 });
+// 🖥️ Inserimento dinamico dell'interfaccia condivisa
+document.addEventListener("DOMContentLoaded", () => {
+  const interfaccia = document.getElementById("interfaccia-condivisa");
+  if (interfaccia) {
+    interfaccia.innerHTML = `
+      <div class="theme-toggle-wrapper">
+        <button class="toggle-button" id="bottone-tema" onclick="cambiaFraseEBottone()">fai tu</button>
+      </div>
+      <div class="back-button-wrapper">
+        <a class="toggle-button" href="../../../../index.html">← torna alla home</a>
+      </div>
+
+
+    `
+    ;
+  }
+});
 
