@@ -4,9 +4,20 @@ const frasi = [
   "meglio?",
   "ci hai ripensato?",
   "ottimo così",
+  "fai come ti pare",
   "basta cliccare",
   "...",
-  "fai come ti pare",
+  "...",
+  "...",
+  "...",
+  "...",
+  "...",
+  "finito?",
+  "...",
+  "...",
+  "...",
+  "...",
+  "...",
 ];
 
 let indiceFrase = 0;
@@ -31,6 +42,7 @@ function cambiaFraseEBottone() {
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   document.body.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
 })();
+
 
 // 🔗 Scroll fluido + effetto pulse per note e ritorno
 document.querySelectorAll('a[href^="#"]').forEach(link => {
