@@ -1,83 +1,94 @@
+/* Variabili CSS globali (tema scuro di default) */
 :root {
-  --bg-color: #000;
-  --text-color: #eee;
-  --link-color: #70cfff;
-  --button-bg: #222;
-  --button-text: #eee;
-  --button-border: #70cfff;
+  --bg-color: #000;               /* Colore di sfondo del sito */
+  --text-color: #eee;             /* Colore del testo principale */
+  --link-color: #70cfff;          /* Colore dei link */
+  --button-bg: #222;              /* Sfondo del pulsante */
+  --button-text: #eee;            /* Colore del testo nel pulsante */
+  --button-border: #70cfff;       /* Colore del bordo del pulsante */
 }
 
+/* Tema chiaro: sovrascrive le variabili se data-theme="light" è presente */
 [data-theme="light"] {
-  --bg-color: #fdf6e3;
-  --text-color: #222;
-  --link-color: #0077cc;
-  --button-bg: #ddd;
-  --button-text: #111;
-  --button-border: #0077cc;
+  --bg-color: #fdf6e3;            /* Sfondo chiaro (tipo Solarized Light) */
+  --text-color: #222;             /* Testo scuro per contrasto */
+  --link-color: #0077cc;          /* Blu acceso per i link */
+  --button-bg: #ddd;              /* Sfondo chiaro del pulsante */
+  --button-text: #111;            /* Testo molto scuro nel pulsante */
+  --button-border: #0077cc;       /* Bordo blu */
 }
 
+/* Stile globale del corpo della pagina */
 body {
-  margin: 0;
-  padding: 2rem;
-  font-family: 'Libre Baskerville', serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  line-height: 1.6;
-  transition: background-color 0.3s, color 0.3s;
+  margin: 0;                                          /* Rimuove margini esterni */
+  padding: 2rem;                                      /* Aggiunge spazio interno */
+  font-family: 'Libre Baskerville', serif;           /* Font principale */
+  background-color: var(--bg-color);                 /* Usa il colore di sfondo attuale (variabile) */
+  color: var(--text-color);                          /* Colore del testo */
+  line-height: 1.6;                                   /* Spaziatura tra righe migliorata */
+  transition: background-color 0.3s, color 0.3s;      /* Transizione morbida tra i temi */
 }
 
+/* Titolo principale (h1) */
 h1 {
-  text-align: center;
-  margin-bottom: 0.5em;
+  text-align: center;        /* Centra il testo */
+  margin-bottom: 0.5em;      /* Spazio inferiore ridotto */
 }
 
+/* Contenitore del pulsante per cambiare tema */
 .theme-toggle-wrapper {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 2rem;
-  z-index: 1000;
+  position: fixed;           /* Posizione fissa nello schermo */
+  bottom: 1.5rem;            /* Distanza dal basso */
+  right: 2rem;               /* Distanza dal lato destro */
+  z-index: 1000;             /* Sta sopra a quasi tutto */
 }
 
+/* Stile del pulsante */
 .toggle-button {
-  font-family: inherit;
-  font-size: 0.9rem;
-  padding: 0.5rem 1rem;
-  background: var(--button-bg);
-  color: var(--button-text);
-  border: 1px solid var(--button-border);
-  border-radius: 999px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  font-family: inherit;                           /* Usa lo stesso font del body */
+  font-size: 0.9rem;                              /* Dimensione del testo */
+  padding: 0.5rem 1rem;                           /* Spaziatura interna */
+  background: var(--button-bg);                   /* Sfondo da variabile */
+  color: var(--button-text);                      /* Colore del testo */
+  border: 1px solid var(--button-border);         /* Bordo con colore tematico */
+  border-radius: 999px;                           /* Forma completamente arrotondata (pillola) */
+  cursor: pointer;                                /* Cambia il cursore su hover */
+  transition: all 0.3s ease;                      /* Transizione fluida su tutti i cambiamenti */
 }
 
+/* Effetto hover del pulsante */
 .toggle-button:hover {
-  background-color: var(--button-border);
-  color: var(--bg-color);
+  background-color: var(--button-border);         /* Inverte i colori: sfondo colorato */
+  color: var(--bg-color);                         /* Testo con colore dello sfondo per contrasto */
 }
 
+/* Sezione con blocchi di testo */
 .sezione {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  border: 1px solid var(--link-color);
-  border-radius: 8px;
+  max-width: 700px;                               /* Larghezza massima della sezione */
+  margin: 2rem auto;                              /* Centra la sezione e aggiunge spazio sopra e sotto */
+  padding: 1.5rem;                                /* Spaziatura interna */
+  border: 1px solid var(--link-color);            /* Bordo colorato */
+  border-radius: 8px;                             /* Angoli leggermente arrotondati */
 }
 
+/* Link generici */
 a {
-  color: var(--link-color);
-  text-decoration: none;
+  color: var(--link-color);       /* Colore dei link dalla variabile */
+  text-decoration: none;          /* Nessuna sottolineatura di default */
 }
 
+/* Link al passaggio del mouse */
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline;     /* Aggiunge sottolineatura su hover */
 }
 
+/* Titoli secondari */
 h2 {
-  margin-top: 0;
+  margin-top: 0;                  /* Rimuove margine sopra il titolo */
 }
 
-
+/* Numero in grassetto accanto ai titoli dei testi */
 ul li > strong {
-  font-size: 0.90rem;
-  margin-right: 0.4rem;
+  font-size: 0.85rem;             /* Riduce leggermente la dimensione del numero */
+  margin-right: 0.4rem;           /* Aggiunge spazio tra numero e testo */
 }
