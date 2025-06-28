@@ -66,6 +66,7 @@ function cambiaFraseEBottone() {
 // 📖 Funzione per aprire un testo casuale
 function apriTestoRandom() {
   const testi = [
+    "testi/2025/GIUGNO/Nominare i rapporti di potere/Nominare i rapporti di potere.html",
     "testi/2025/GIUGNO/Uomo di merda/Uomo di merda.html",
     "testi/2025/GIUGNO/Gabbia luminosa/Una gabbia luminosa.html",
     "testi/2025/GIUGNO/non sono un medico/Non sono un medico non voglio essere un paziente.html",
