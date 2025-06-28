@@ -1,3 +1,20 @@
+
+// cambiamento frasi sottotitolo
+const frasiSottotitolo = [
+    "qui ci poteva stare qualcosa di intelligente, invece no",
+    "poteva iniziare con una citazione, non è successo.",
+    "in teoria dovrei darti una ragione per leggere",
+    "ho dimenticato cosa volevo scrivere qui",
+    "se capisci, spiegamelo",
+    "poteva essere peggio: poteva essere motivazionale",
+    "forse era meglio un video di gatti",
+    "questo spazio era vuoto. ora è confuso",
+  ];
+
+  const fraseScelta = frasiSottotitolo[Math.floor(Math.random() * frasiSottotitolo.length)];
+  document.getElementById("sottotitolo-rotante").textContent = fraseScelta;
+
+
 // 🎭 Frasi alternative per il bottone tema (cambiano ad ogni click)
 const frasi = [
   "fai tu",
@@ -42,3 +59,41 @@ function cambiaFraseEBottone() {
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   document.body.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
 })();
+
+
+
+
+// 📖 Funzione per aprire un testo casuale
+function apriTestoRandom() {
+  const testi = [
+    "testi/2025/GIUGNO/Uomo di merda/Uomo di merda.html",
+    "testi/2025/GIUGNO/Gabbia luminosa/Una gabbia luminosa.html",
+    "testi/2025/GIUGNO/non sono un medico/Non sono un medico non voglio essere un paziente.html",
+    "testi/2025/maggio/Dopo ventitré pagine non mi fido più nemmeno di me stesso/Dopo ventitré pagine non mi fido più nemmeno di me stesso.html",
+    "testi/2025/maggio/Voglio_lo_stipendio_per_andare_all_assemblea_di_quartiere/vogliolostipendio.html",
+    "testi/2025/maggio/Io non ho mai voluto entrarci/Io non ho mai voluto entrarci.html",
+    "testi/2025/maggio/Cronache di uno che si è smentito da solo/Cronache di uno che si è smentito da solo.html",
+    "testi/2025/maggio/Radici concettuali non pervenute/Radici concettuali non pervenute.html"
+  ];
+
+  const overlay = document.getElementById("overlay-random");
+  const box = document.getElementById("box-random");
+  overlay.style.display = "flex";
+  overlay.classList.remove("hide");
+
+  // Cambia frase dopo 1.4s
+  setTimeout(() => {
+    box.textContent = "Ecco qualcosa. Senza fretta.";
+  }, 1400);
+
+  // Dissolvenza in uscita dopo 2.2s
+  setTimeout(() => {
+    overlay.classList.add("hide");
+  }, 2200);
+
+  // Reindirizza dopo 3s
+  setTimeout(() => {
+    const randomIndex = Math.floor(Math.random() * testi.length);
+    window.location.href = testi[randomIndex];
+  }, 3000);
+}

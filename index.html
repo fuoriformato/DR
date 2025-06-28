@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
+
+
 <head>
   <link rel="icon" href="android-chrome-192x192.png" type="image/png">
   <meta charset="UTF-8">
@@ -16,6 +18,14 @@
     }
   </style>
 </head>
+
+
+<div id="overlay-random" style="display: none;">
+  <div id="box-random">
+    <p>Vediamo cosa ti capita...</p>
+  </div>
+</div>
+
 <body>
   <div class="theme-toggle-wrapper">
    <button class="toggle-button" id="bottone-tema" onclick="cambiaFraseEBottone()">fai tu</button>
@@ -23,7 +33,7 @@
 
 <div style="text-align: center;">
   <h1>fuoriformato</h1>
-  <p style="color: gray; font-style: italic; margin-top: -0.8rem;">a cura di Daniele Ricci</p>
+  <p id="sottotitolo-rotante" style="color: gray; font-style: italic; margin-top: -0.8rem;"></p>
 </div>
   <div class="sezione">
     <h2>Raccolta</h2>
@@ -35,6 +45,14 @@
     <h2>Testi singoli</h2>
     <p>Questi testi, pur non inclusi nella raccolta, ne condividono lo spirito: sono frammenti autonomi ma intrecciati, episodi paralleli che dialogano con gli stessi temi.</p>
 
+
+<!-- 
+  ⚠️ Promemoria:
+  Quando aggiungi un nuovo testo:
+  1. Inseriscilo in cima all’elenco cronologico corretto (es. in Giugno 2025)
+  2. Aggiorna il blocco "✸ Ultimo testo pubblicato" spostando quello vecchio sotto
+  3. Aggiungi il nuovo percorso anche nell’array JS dentro la funzione apriTestoRandom() in script.js
+-->
 <h2>Giugno 2025</h2>
 <ul>
   <li><strong>1</strong> – <a href="testi/2025/GIUGNO/Uomo di merda/Uomo di merda.html">Uomo di merda (ma non io, io sono diverso, vero?)</a></li>
@@ -48,7 +66,8 @@
           <span class="data-ultimo">(26 giugno)</span>
         </p>
       </div>
-    </a>
+    </a> 
+ 
 
 <h2>Maggio 2025</h2>
 <ul>
@@ -58,8 +77,17 @@
   <li><strong>29</strong> – <a href="testi/2025/maggio/Cronache di uno che si è smentito da solo/Cronache di uno che si è smentito da solo.html">Cronache di uno che si è smentito da solo</a></li>
  <li><strong>29</strong> – <a href="testi/2025/maggio/Radici concettuali non pervenute/Radici concettuali non pervenute.html">Radici concettuali non pervenute</a></li>
  
+
+  <div class="testo-random-box">
+
+  <button onclick="apriTestoRandom()" class="bottone-random">
+    Non sai scegliere? Clicca qui per un testo a caso
+  </button>
+</div>
+
 </ul>
   </div>
+
 
 
 <script src="script.js"></script>
