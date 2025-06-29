@@ -196,3 +196,24 @@ p {
   background-color: var(--button-border);
   color: var(--bg-color);
 }
+
+
+
+/* citazione il rumore sordo e prolungato della battaglia */
+
+.citazione-finale {
+  text-align: right;
+  font-style: italic;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  line-height: 1.5;
+}
+.citazione-finale .autore {
+  font-size: 0.85rem;
+  display: block;
+  margin-top: 0.4em;
+  font-style: normal;
+  opacity: 0.7;
+}
