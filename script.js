@@ -1,4 +1,3 @@
-
 // cambiamento frasi sottotitolo
 const frasiSottotitolo = [
     "qui ci poteva stare qualcosa di intelligente, invece no",
@@ -100,3 +99,13 @@ function apriTestoRandom() {
     window.location.href = testi[randomIndex];
   }, 3000);
 }
+
+// ✅ Rendi cliccabili solo i link nei box, non l'intero box
+document.querySelectorAll('.anteprima-box').forEach(box => {
+  box.addEventListener('click', e => {
+    // Se l'elemento cliccato è un link, lascia passare il click
+    if (e.target.tagName.toLowerCase() === 'a') return;
+    // Altrimenti, previene l'azione di default
+    e.preventDefault();
+  });
+});

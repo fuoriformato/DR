@@ -224,3 +224,70 @@ ul li > strong {
   position: relative;
 }
 
+/* Nuovo stile elegante e discreto per il bottone <summary> dell'anteprima */
+.anteprima-testo summary {
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: normal;
+  color: var(--text-color);
+  padding-left: 1.2rem;
+  margin: 0.2rem 0 0.3rem;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.anteprima-testo summary:hover {
+  opacity: 1;
+}
+
+.anteprima-testo summary {
+  list-style: none;
+}
+
+.anteprima-testo summary::-webkit-details-marker {
+  display: none;
+}
+
+.anteprima-testo[open] summary::before {
+  content: "▾ ";
+  display: inline-block;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
+}
+
+.anteprima-testo summary::before {
+  content: "▸ ";
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+/* Nuovo stile per il testo dell'anteprima */
+.anteprima-testo p {
+  margin: 0.3rem 1.5rem 1rem;
+  color: var(--text-color);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  opacity: 0.85;
+}
+
+.anteprima-testo p strong {
+  font-weight: 600;
+  color: #bbb; /* Più chiaro rispetto al testo normale nel tema scuro */
+}
+
+[data-theme="light"] .anteprima-testo p strong {
+  color: #333; /* Più scuro rispetto al testo normale nel tema chiaro */
+}
+
+.minuti-lettura {
+  font-weight: normal;
+  color: #999;
+}
+
+[data-theme="light"] .minuti-lettura {
+  color: #555;
+}
+
+[class^="anteprima"], .anteprima-testo, .box-ultimo-testo {
+  /* Gli stili delle anteprime e delle box sono qui sopra */
+}
