@@ -217,3 +217,9 @@ p {
   font-style: normal;
   opacity: 0.7;
 }
+
+/* 🔗 Stile cliccabile per numeri e frecce delle note */
+sup a,
+.backnote {
+  text-decoration: underline;
+}
