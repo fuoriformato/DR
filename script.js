@@ -65,7 +65,7 @@ function cambiaFraseEBottone() {
 // 📖 Funzione per aprire un testo casuale
 function apriTestoRandom() {
   const testi = [
-    "testi/2025/LUGLIO/Il cane piu addestrato del cortile/Il cane più addestrato del cortile.html",
+    "testi/2025/LUGLIO/Il cane piu addestrato del cortile/Il cane piu addestrato del cortile.html",
     "testi/2025/GIUGNO/Il rumore sordo e prolungato della battaglia/Il rumore sordo e prolungato della battaglia.html",
     "testi/2025/GIUGNO/Nominare i rapporti di potere/Nominare i rapporti di potere.html",
     "testi/2025/GIUGNO/Uomo di merda/Uomo di merda.html",
