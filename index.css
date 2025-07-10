@@ -296,8 +296,8 @@ ul li > strong {
 #bottone-random {
   position: fixed;
   top: 50%;
-  left: 0;
-  transform: translateY(-50%) translateX(-100%);
+  left: -250px;
+  transform: translateY(-50%);
   background-color: rgba(255, 255, 255, 0.07);
   color: var(--text-color);
   /* border: 1px solid var(--button-border); */ /* RIMOSSO */
@@ -306,7 +306,7 @@ ul li > strong {
   border-radius: 0 8px 8px 0;
   cursor: pointer;
   opacity: 0;
-  transition: transform 0.5s ease, opacity 0.6s ease;
+  transition: left 0.5s ease, opacity 0.6s ease;
   z-index: 1000;
   min-width: 200px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -317,5 +317,5 @@ ul li > strong {
 
 #bottone-random.visibile {
   opacity: 1;
-  transform: translateY(-50%) translateX(0);
+  left: 0;
 }
