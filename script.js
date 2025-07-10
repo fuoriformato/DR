@@ -111,17 +111,3 @@ document.querySelectorAll('.anteprima-box').forEach(box => {
   });
 });
 
-// 🎯 Mostra il bottone random quando si arriva quasi alla fine
-window.addEventListener('scroll', () => {
-  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-  const scrolled = window.scrollY;
-
-  const bottoneRandom = document.getElementById('bottone-random');
-  if (!bottoneRandom) return;
-
-  if (scrollable - scrolled < 150) {
-    bottoneRandom.classList.add('visibile');
-  } else {
-    bottoneRandom.classList.remove('visibile');
-  }
-});
