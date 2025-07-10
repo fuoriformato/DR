@@ -335,4 +335,8 @@ ul li > strong {
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   }
+  #bottone-random.visibile {
+    left: 50%;
+    transform: none;
+  }
 }
