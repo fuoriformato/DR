@@ -319,17 +319,3 @@ ul li > strong {
   opacity: 1;
   transform: translateY(-50%) translateX(0);
 }
-@media (max-width: 768px) {
-  #bottone-random {
-    top: auto;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 999px;
-    min-width: unset;
-    padding: 0.5rem 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    font-size: 0.85rem;
-    text-align: center;
-  }
-}
