@@ -83,8 +83,8 @@ function apriTestoRandom() {
   const box = document.getElementById("box-random");
   overlay.style.display = "flex";
   overlay.classList.remove("hide");
+  box.textContent = "Vediamo cosa ti capita...";
 
-  // Cambia frase dopo 1.4s
   setTimeout(() => {
     box.textContent = "Ecco qualcosa. Senza fretta.";
   }, 1400);
@@ -109,4 +109,19 @@ document.querySelectorAll('.anteprima-box').forEach(box => {
     // Altrimenti, previene l'azione di default
     e.preventDefault();
   });
+});
+
+// 🎯 Mostra il bottone random quando si arriva quasi alla fine
+window.addEventListener('scroll', () => {
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  const scrolled = window.scrollY;
+
+  const bottoneRandom = document.getElementById('bottone-random');
+  if (!bottoneRandom) return;
+
+  if (scrollable - scrolled < 150) {
+    bottoneRandom.classList.add('visibile');
+  } else {
+    bottoneRandom.classList.remove('visibile');
+  }
 });
