@@ -111,16 +111,3 @@ document.querySelectorAll('.anteprima-box').forEach(box => {
   });
 });
 
-window.addEventListener('scroll', function () {
-  const bottoneRandom = document.getElementById('bottone-random');
-  const scrolled = window.scrollY + window.innerHeight;
-  const threshold = document.body.scrollHeight - 100; // 200px dal fondo
-
-  if (scrolled >= threshold) {
-    bottoneRandom.style.opacity = '1';
-    bottoneRandom.style.pointerEvents = 'auto';
-  } else {
-    bottoneRandom.style.opacity = '0';
-    bottoneRandom.style.pointerEvents = 'none';
-  }
-});
