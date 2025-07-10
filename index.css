@@ -184,7 +184,8 @@ ul li > strong {
   border-radius: 999px;
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
-  opacity: 0.75;
+  opacity: 0,75;
+  
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Ombra chiara per tema scuro */
 }
 
