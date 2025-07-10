@@ -323,10 +323,9 @@ ul li > strong {
 
 @media (max-width: 768px) {
   #bottone-random {
-    top: auto;
-    bottom: 20px;
-    left: 50%;
-    transform: none;
+    position: static;
+    margin: 2rem auto;
+    display: block;
     border-radius: 999px;
     min-width: unset;
     padding: 0.6rem 1.2rem;
@@ -335,8 +334,8 @@ ul li > strong {
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   }
-  #bottone-random.visibile {
+  /* #bottone-random.visibile {
     left: 50%;
     transform: none;
-  }
+  } */
 }
