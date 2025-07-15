@@ -65,6 +65,7 @@ function cambiaFraseEBottone() {
 // 📖 Funzione per aprire un testo casuale
 function apriTestoRandom() {
   const testi = [
+    "testi/2025/LUGLIO/non voglio essere salvato da una frase fatta/non voglio essere salvato da una frase fatta.html",
     "testi/2025/LUGLIO/Il cane piu addestrato del cortile/Il cane piu addestrato del cortile.html",
     "testi/2025/GIUGNO/Il rumore sordo e prolungato della battaglia/Il rumore sordo e prolungato della battaglia.html",
     "testi/2025/GIUGNO/Nominare i rapporti di potere/Nominare i rapporti di potere.html",
@@ -76,6 +77,7 @@ function apriTestoRandom() {
     "testi/2025/maggio/Io non ho mai voluto entrarci/Io non ho mai voluto entrarci.html",
     "testi/2025/maggio/Cronache di uno che si è smentito da solo/Cronache di uno che si è smentito da solo.html",
     "testi/2025/maggio/Radici concettuali non pervenute/Radici concettuali non pervenute.html"
+   
 
   ];
 
