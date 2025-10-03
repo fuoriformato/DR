@@ -75,7 +75,7 @@ function apriTestoRandom() {
     "testi/2025/GIUGNO/non sono un medico/Non sono un medico non voglio essere un paziente.html",
     "testi/2025/maggio/Dopo ventitré pagine non mi fido più nemmeno di me stesso/Dopo ventitré pagine non mi fido più nemmeno di me stesso.html",
     "testi/2025/maggio/Voglio_lo_stipendio_per_andare_all_assemblea_di_quartiere/vogliolostipendio.html",
-    "testi/2025/maggio/Io non ho mai voluto entrarci/Io non ho mai voluto entrarci.html",
+
     "testi/2025/maggio/Cronache di uno che si è smentito da solo/Cronache di uno che si è smentito da solo.html",
     "testi/2025/maggio/Radici concettuali non pervenute/Radici concettuali non pervenute.html"
    
